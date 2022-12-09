@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31611.283
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiGraphqlApp", "MauiGraphqlApp\MauiGraphqlApp.csproj", "{42D7C934-82B3-4003-84BB-459E255B8CD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42D7C934-82B3-4003-84BB-459E255B8CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D7C934-82B3-4003-84BB-459E255B8CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D7C934-82B3-4003-84BB-459E255B8CD2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{42D7C934-82B3-4003-84BB-459E255B8CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D7C934-82B3-4003-84BB-459E255B8CD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42D7C934-82B3-4003-84BB-459E255B8CD2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBA98E67-0F18-4B84-AEC4-7BFF3A287D0F}
+		        SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+EndGlobal

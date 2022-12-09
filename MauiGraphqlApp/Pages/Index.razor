@@ -1,0 +1,47 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<UseGetAssets Context="result" Strategy="ExecutionStrategy.CacheAndNetwork">
+    <ChildContent>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>LastPrice</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            @if (result.Assets?.Nodes is not null)
+            {
+                @foreach (var asset in result.Assets.Nodes)
+                {
+                    <tr>
+                        <td>@asset.Name</td>
+                        <td>@asset.Id</td>
+                        <td>(@asset.Price.LastPrice)</td>
+                    </tr>
+                }
+            }
+            </tbody>
+        </table>
+    </ChildContent>
+    <LoadingContent>
+        Loading ...
+    </LoadingContent>
+</UseGetAssets>
+<br />
+<br />
+<br />
+
+<UseOnPriceChange Context="result">
+    <ChildContent>
+        @result.OnPriceChange.Symbol @result.OnPriceChange.LastPrice
+    </ChildContent>
+</UseOnPriceChange>

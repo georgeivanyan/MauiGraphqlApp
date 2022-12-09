@@ -1,0 +1,12 @@
+{
+  "projects": [
+    {
+      "schema": [
+        "MauiGraphqlApp/schema.graphql"
+      ],
+      "documents": [
+        "MauiGraphqlApp/**/*.graphql"
+      ]
+    }
+  ]
+}
