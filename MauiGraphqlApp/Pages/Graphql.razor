@@ -1,0 +1,36 @@
+﻿@page "/graphql"
+@inject MauiGraphqlAppClient MauiGraphqlAppClient;
+
+<h1>GraphQL Client</h1>
+
+Getting GraphQL Data:
+<ul>
+    @foreach (var session in _assets)
+    {
+        <li>@session.Name: @session.Price.LastPrice</li>
+    }
+</ul>
+@code {
+    private IReadOnlyList<IAssetInfo> _assets = Array.Empty<IAssetInfo>();
+    private IDisposable _storeSession;
+
+    protected override void OnInitialized()
+    {
+        _storeSession =
+            MauiGraphqlAppClient
+                .GetAssets
+                .Watch(ExecutionStrategy.CacheAndNetwork)
+                .Where(n => !n.Errors.Any())
+                .Select(t => t.Data!.Assets!.Nodes)
+                .Subscribe(result =>
+                {
+                    _assets = result;
+                    InvokeAsync(this.StateHasChanged);
+                });
+    }
+    public void Dispose()
+    {
+        _storeSession?.Dispose();
+    }
+
+}
